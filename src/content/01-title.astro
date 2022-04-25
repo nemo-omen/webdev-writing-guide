@@ -1,0 +1,36 @@
+---
+   import { Markdown } from 'astro/components';
+   const title = "Writing for Web Developers"
+   const subtitle = "A guide for computer science majors"
+   const page = 1
+   const slug = 'title'
+   const author = 'Jeff Caldwell'
+   const date =  new Date().toLocaleDateString('en-US', {month: 'long', day: 'numeric', year: 'numeric'});
+---
+
+<section class="page" id="title">
+   <image class="section-image" id="intro-image" width="300" height="300" src="/images/01-header.png" />
+   <Markdown>
+      # {title}
+      ## {subtitle}
+      ### by {author}
+      #### {date}
+   </Markdown>
+</section>
+
+<style>
+
+   #title {
+      justify-content: center;
+      align-items: center;
+   }
+
+   h2 {
+      /* text-decoration: underline; */
+      /* text-decoration-color: var(--accent); */
+      /* text-underline-offset: 0.5em; */
+      /* text-decoration-thickness: 2px; */
+      background-color: var(--primary);
+      padding: 0.25em;
+   }
+</style>

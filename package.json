@@ -1,0 +1,25 @@
+{
+  "name": "@example/starter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "build:pdf": "pnpm run build && concurrently -g \"pnpm run preview\" \"pnpm run pdf\"",
+    "pdf": "wkhtmltopdf -d 300 -B 1in -R 1in -L 1in -T 1in --page-size Letter --footer-right [page] http://localhost:3000 ./dist/Guide.pdf",
+    "paged": "pagedjs-cli http://localhost:3000 -o WritingGuide.pdf",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "@astrojs/svelte": "^0.1.1",
+    "astro": "^1.0.0-beta.17",
+    "svelte": "^3.46.4",
+    "svelte-preprocess": "^4.10.6",
+    "vite": "^2.9.0"
+  },
+  "dependencies": {
+    "concurrently": "^7.1.0",
+    "html2pdf.js": "^0.10.1"
+  }
+}

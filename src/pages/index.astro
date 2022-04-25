@@ -1,0 +1,70 @@
+---
+import astroConfig from '../../astro.config.mjs';
+import '../styles/global.css';
+// import '../styles/interface.css';
+import Title from '../content/01-title.astro';
+import TOC from '../content/02-toc.astro';
+import Intro from '../content/03-intro.astro';
+import Career from '../content/04-career-possibilities.astro';
+import Academic from '../content/05-academic-professional.astro';
+import Research from '../content/06-research.astro';
+import Process from '../content/07-process.astro';
+import Help from '../content/08-help.astro';
+import Styleguides from '../content/09-style-guides.astro';
+import Ethics from '../content/10-ethics.astro';
+import Visuals from '../content/11-visuals.astro';
+import Conclusion from '../content/12-conclusion.astro';
+import References from '../content/13-references.astro';
+import Appendices from '../content/14-appendices.astro';
+import Glossary from '../content/15-glossary.astro';
+// import Html2Pdf from '../components/Html2Pdf.svelte';
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let title = 'Guide to Writing in Web Development';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{title}</title>
+
+	<base href="http://localhost:3000">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+	<style>
+		
+	</style>
+</head>
+<body>
+	<main>
+		<Title />
+		<TOC />
+		<Intro />
+		<Career />
+		<Academic />
+		<Research />
+		<Process />
+		<Help />
+		<Styleguides />
+		<Ethics />
+		<Visuals />
+		<Conclusion />
+		<References />
+		<Appendices />
+		<Glossary />
+		
+		<!-- <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js" defer is:inline></script> -->
+	</main>
+</body>
+</html>
