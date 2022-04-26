@@ -23,14 +23,15 @@ body {
 	color: #000000;
 }
 
-main {
-	margin: 1in;
-}
+/* main { */
+	/* margin: 1in; */
+/* } */
 
 section {
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	/* margin-inline: 1in; */
 }
 
 section:not(#title), 
@@ -49,28 +50,41 @@ section p {
 	align-items: center;
 }
 
-#title,
-#toc {
-	page-break-before: never;
-	page-break-after: page;
-	min-height: 11in;
+section {
+	/* break-before: never; */
+	/* break-inside: auto; */
 }
 
-#references,
+#title {
+	break-after: page;
+	break-inside: avoid;
+	/* min-height: 11in; */
+	/* background-color: tomato; */
+}
+
+#toc {
+	/* min-height: 11in; */
+	/* break-before: page; */
+	break-after: page;
+	break-inside: avoid;
+}
+
 #appendices,
 #glossary {
-	page-break-after: always;
+	/* min-height: 11in; */
+	page-break-before: always;
+	page-break-inside: avoid;
 }
 
 h1 {
 	font-size: 16pt;
 	letter-spacing: 0.125em;
-	/* text-decoration: underline;
+	text-decoration: underline;
 	text-underline-offset: 0.5em;
 	text-decoration-color: var(--primary);
-	text-decoration-thickness: 4px; */
+	text-decoration-thickness: 4px;
 	margin-bottom: 0.5rem;
-	border-bottom: 4px solid var(--primary);
+	/* border-bottom: 4px solid var(--primary); */
 	padding-bottom: 0.25em;
 }
 
@@ -85,7 +99,7 @@ h4 {
 	size: Letter;
 	height: 11in;
 	width: 8.5in;
-	/* margin: 1in; */
+	margin: 1in;
 
 	@bottom-right {
 		content: counter(page);
