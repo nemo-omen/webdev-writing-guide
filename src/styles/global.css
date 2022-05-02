@@ -94,3 +94,15 @@ h4 {
 #appendices {
 	margin-top: 4rem; 
 }
+
+figure {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	margin-block: 2rem;
+}
+
+figcaption {
+	font-style: italic;
+}
